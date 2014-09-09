@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @career_skill.order %>
+</p>
+
+<p>
+  <strong>Career:</strong>
+  <%= @career_skill.career %>
+</p>
+
+<p>
+  <strong>Skill:</strong>
+  <%= @career_skill.skill %>
+</p>
+
+<%= link_to 'Edit', edit_career_skill_path(@career_skill) %> |
+<%= link_to 'Back', career_skills_path %>
