@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140909205957) do
+ActiveRecord::Schema.define(version: 20140911184748) do
 
   create_table "career_skills", force: true do |t|
     t.integer  "order"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 20140909205957) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_careers", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "career_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_careers", ["career_id"], name: "index_user_careers_on_career_id"
+  add_index "user_careers", ["user_id"], name: "index_user_careers_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

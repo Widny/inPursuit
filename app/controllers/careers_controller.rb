@@ -10,6 +10,8 @@ class CareersController < ApplicationController
   # GET /careers/1
   # GET /careers/1.json
   def show
+    @career_skills = CareerSkill.where(career_id: params[:id])
+    @user_career = UserCareer.new
   end
 
   # GET /careers/new

@@ -14,8 +14,8 @@
     <% @career_skills.each do |career_skill| %>
       <tr>
         <td><%= career_skill.order %></td>
-        <td><%= career_skill.career %></td>
-        <td><%= career_skill.skill %></td>
+        <td><%= career_skill.career.title %></td>
+        <td><%= career_skill.skill.name %></td>
         <td><%= link_to 'Show', career_skill %></td>
         <td><%= link_to 'Edit', edit_career_skill_path(career_skill) %></td>
         <td><%= link_to 'Destroy', career_skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>

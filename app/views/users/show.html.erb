@@ -9,6 +9,17 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
-
+<p>
+	<% @user_careers.each do |career| %>
+		<strong>Path - <%= career.title %>:</strong>
+		<br>
+		Skills
+		<br>
+		<% career.skills.each do |skill| %>
+		<%= skill.name %>
+		<br>
+		<% end %>
+	<% end %>
+</p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

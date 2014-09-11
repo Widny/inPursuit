@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  resources :user_careers
+
   resources :skills
 
   resources :career_skills
@@ -6,6 +10,7 @@ Rails.application.routes.draw do
   resources :careers
 
   resources :users
+  root 'users#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

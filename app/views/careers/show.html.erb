@@ -6,9 +6,19 @@
 </p>
 
 <p>
+	<% @career_skills.each do |p| %>
+	<%= p.skill.name %>
+	<% end %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @career.description %>
 </p>
+
+
+<%= render 'user_careers/form' %>
+
 
 <%= link_to 'Edit', edit_career_path(@career) %> |
 <%= link_to 'Back', careers_path %>

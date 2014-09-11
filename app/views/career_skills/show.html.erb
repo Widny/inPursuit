@@ -7,12 +7,12 @@
 
 <p>
   <strong>Career:</strong>
-  <%= @career_skill.career %>
+  <%= @career_skill.career.title %>
 </p>
 
 <p>
   <strong>Skill:</strong>
-  <%= @career_skill.skill %>
+  <%= @career_skill.skill.name %>
 </p>
 
 <%= link_to 'Edit', edit_career_skill_path(@career_skill) %> |
