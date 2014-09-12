@@ -19,7 +19,7 @@ namespace :local do
 		task dump: :environment do
 		career_skills = CareerSkill.all
 	career_skills.each do |cs|
-		puts "CareerSkill.find_or_create_by(career_id: #{cs.career_id}).update_attributes(skill_id: #{cs.skill_id})"
+		puts "CareerSkill.find_or_create_by(career_id: #{cs.career_id}, skill_id: #{cs.skill_id})"
 			
 		end
 	end
