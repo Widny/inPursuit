@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get to: 'sessions/new'
+
   get 'home/index'
+  resources :sessions
 
   resources :user_careers
 
@@ -12,7 +15,7 @@ Rails.application.routes.draw do
   resources :users
   
   #root 'users#index'
-  root 'home#index' 
+  #root 'home#index' 
 
 
   # The priority is based upon order of creation: first created -> highest priority.
